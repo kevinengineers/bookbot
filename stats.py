@@ -21,3 +21,19 @@ def char_count(book_str):
 
     return chars
 
+
+def sort_on(single_dict):
+   return single_dict["num"]
+
+
+def sort_dict(dict):
+
+    list_of_dicts = list()
+
+    for key, value in dict.items():
+        list_of_dicts.append({"char": key, "num": value})
+
+    list_of_dicts.sort(reverse=True, key=sort_on)
+
+    return list_of_dicts
+
